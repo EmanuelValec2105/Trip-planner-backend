@@ -1,0 +1,31 @@
+[
+  {
+    "id": "98fc812c-6a14-4516-b49e-368999b67607",
+    "name": "Ljeto 2025",
+    "owner": "Emanuel",
+    "trips": [],
+    "sharedWith": [
+      "Ema",
+      "ema"
+    ]
+  },
+  {
+    "id": "4ae78415-a00a-4851-a544-96d8b40dc401",
+    "name": "Admin je ovo preimenovao",
+    "owner": "Emanuel",
+    "trips": [],
+    "sharedWith": [
+      "ema",
+      "Ema"
+    ]
+  },
+  {
+    "id": "a5428ee0-c4ac-4175-8805-043dd966a76c",
+    "name": "Moj novi trip",
+    "owner": "Emanuel",
+    "trips": [],
+    "sharedWith": [
+      "ema"
+    ]
+  }
+]
