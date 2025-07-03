@@ -16,14 +16,14 @@ const SECRET_KEY = 'tajna123';
 let refreshTokens = [];
 let folders = [];
 
-// Ucitaj postojece foldere
+// Ucitvanje foldera
 if (fs.existsSync('./folders.json')) {
   const data = fs.readFileSync('./folders.json', 'utf-8');
   folders = JSON.parse(data);
   console.log(`Učitano ${folders.length} foldera iz folders.json`);
 }
 
-// Snimanje foldera
+// Azuriranje foldera
 function saveFolders() {
   fs.writeFileSync('./folders.json', JSON.stringify(folders, null, 2));
   console.log('folders.json ažuriran.');
@@ -31,7 +31,7 @@ function saveFolders() {
 
 // Pocetna
 app.get('/', (req, res) => {
-  res.send('Trip Planner API');
+  res.send('Trip Planner backend zadatak za intervju');
 });
 
 // Login
@@ -46,7 +46,7 @@ app.post('/login', (req, res) => {
   res.json({ accessToken, refreshToken });
 });
 
-// Refresh token - novi access token
+// Refresh token
 app.post('/token', (req, res) => {
   const { refreshToken } = req.body;
   if (!refreshToken) {
@@ -62,7 +62,7 @@ app.post('/token', (req, res) => {
   });
 });
 
-// Middleware za autentikaciju
+// Autentikacija tokena
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
